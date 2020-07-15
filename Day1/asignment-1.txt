@@ -1,1 +1,93 @@
 ans1)
+----------------------------------------------------------------------------------------
+method                  description
+----------------------------------------------------------------------------------------
+assert()           :    Writes an error message to the console if the assertion is false
+clear()	           :    Clears the console
+count()	           :    Logs the number of times that this particular call to count() has been called
+error()	           :    Outputs an error message to the console
+group()	           :    Creates a new inline group in the console. This indents following console messages by an additional level, until console.groupEnd() is called
+groupCollapsed()   :    Creates a new inline group in the console. However, the new group is created collapsed. The user will need to use the disclosure button to expand it
+groupEnd()	       :    Exits the current inline group in the console
+info()	           :    Outputs an informational message to the console
+log()	           :    Outputs a message to the console
+table()	           :    Displays tabular data as a table
+time()	           :    Starts a timer (can track how long an operation takes)
+timeEnd()	       :    Stops a timer that was previously started by console.time()
+trace()	           :    Outputs a stack trace to the console
+warn()	           :    Outputs a warning message to the console
+
+=========================================================================================
+
+ans2)
+1. var declarations are globally scoped or function scoped while let and const are block scoped. 
+2. var variables can be updated and re-declared within its scope, let variables can be updated but not re-declared and const variables can neither be updated nor re-declared.
+3. While var and let can be declared without being initialized, const must be initialized during declaration.
+
+e.g. var
+function nodeSimplified(){
+  var a =10;
+  console.log(a);  // output 10
+  if(true){
+   var a=20;
+   console.log(a); // output 20
+  }
+  console.log(a);  // output 20
+}
+
+e.g. let
+
+function nodeSimplified(){
+  let a =10;
+  console.log(a);  // output 10
+  if(true){
+   let a=20;
+   console.log(a); // output 20
+  }
+  console.log(a);  // output 10
+}
+
+e.g. const
+
+function nodeSimplified(){
+  const MY_VARIABLE =10;
+  console.log(MY_VARIABLE);  //output 10 
+}
+
+function nodeSimplified(){
+  const MY_VARIABLE =10;
+  console.log(MY_VARIABLE);  //output 10
+  MY_VARIABLE =20;           //throws type error
+  console.log(MY_VARIABLE); 
+}
+
+====================================================================================
+ans3)
+JavaScript provides different data types to hold different types of values. There are two types of data types in JavaScript.
+
+1.Primitive data type
+2.Non-primitive (reference) data type
+
+1.JavaScript primitive data type
+--------------------------------
+There are five types of primitive data types in JavaScript. They are as follows:
+-------------------------------------------------------------------------------
+Data Type	    Description
+------------------------------------------------------------------------------
+String	   :    represents sequence of characters e.g. "hello"
+Number	   :    represents numeric values e.g. 100
+Boolean	   :    represents boolean value either false or true
+Undefined  :    represents undefined value
+Null	   :    represents null i.e. no value at all
+------------------------------------------------------------------------------
+
+JavaScript non-primitive data types
+------------------------------------
+The non-primitive data types are as follows:
+-----------------------------------------------------------------------------
+Data Type	Description
+-----------------------------------------------------------------------------
+Object	    :   represents instance through which we can access members
+Array	    :   represents group of similar values
+RegExp	    :   represents regular expression
+-----------------------------------------------------------------------------

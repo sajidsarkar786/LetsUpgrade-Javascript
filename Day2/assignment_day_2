@@ -1,0 +1,94 @@
+ans1)
+<script>
+    let val = prompt("enter year of birth");
+    console.log(val);
+</script>
+
+===============================================================
+
+ans2)
+methods of string
+-----------------
+1.search() : The search() method searches a string for a specified value and returns the position of the match.
+ e.g.
+    var str = "Please locate where 'locate' occurs!";
+    var pos = str.search("locate");
+
+2.slice() : slice() extracts a part of a string and returns the extracted part in a new string.
+ e.g.
+    var str = "Apple, Banana, Kiwi";
+    var res = str.slice(7, 13); //Banana
+    var res = str.slice(7); //Banana, Kiwi
+    var res = str.slice(-12); //Banana, Kiwi
+
+3.substring() : substring() is similar to slice().The difference is that substring() cannot accept negative indexes.
+ e.g.
+    var str = "Apple, Banana, Kiwi";
+    var res = str.substring(7, 13); //Banana, Kiwi
+
+4.substr() : substr() is similar to slice(). The difference is that the second parameter specifies the length of the extracted part.
+ e.g.
+    var str = "Apple, Banana, Kiwi";
+    var res = str.substr(7, 6);//Banana
+    var res = str.substr(-4); //kiwi
+
+5.replace() : The replace() method replaces a specified value with another value in a string.
+ e.g.
+    str = "Please visit Microsoft!";
+    var n = str.replace("Microsoft", "Opera");
+
+6.String.trim() : The trim() method removes whitespace from both sides of a string.
+ e.g. 
+    var str = "       Hello World!        ";
+    alert(str.trim());
+
+7.charAt() : The charAt() method returns the character at a specified index (position) in a string.
+ e.g.
+    var str = "HELLO WORLD";
+    str.charAt(0); //H
+
+8.charCodeAt() : The charCodeAt() method returns the unicode of the character at a specified index in a string.
+ e.g.
+    var str = "HELLO WORLD";
+    str.charCodeAt(0);//72
+
+
+Methods of Array
+----------------
+
+1.toString() : The JavaScript method toString() converts an array to a string.
+ e.g.
+    <p id="demo"></p>
+    <script>
+        var fruits = ["Banana", "Orange", "Apple", "Mango"];
+        document.getElementById("demo").innerHTML = fruits.toString();
+    </script>
+
+2.join() : The join() method also joins all array elements into a string.
+    e.g.
+        <p id="demo"></p>
+        <script>
+            var fruits = ["Banana", "Orange", "Apple", "Mango"];
+            document.getElementById("demo").innerHTML = fruits.join(" * ");
+        </script>
+
+3.pop() : The pop() method removes the last element from an array.
+ e.g.
+    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+    fruits.pop(); 
+
+4.push() : The push() method adds a new element to an array (at the end).
+ e.g.
+    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+    fruits.push("Kiwi");
+
+5.delete : elements can be deleted by using the JavaScript operator delete.
+ e.g. 
+    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+    delete fruits[0];    
+
+6.Splice() : The splice() method can be used to add new items to an array
+ e.g. 
+    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+    fruits.splice(2, 2, "Lemon", "Kiwi"); //Banana,Orange,Lemon,Kiwi
+

@@ -1,0 +1,126 @@
+ans1)
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to check a number is even or odd.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var number = prompt("Please enter a Number");
+  if (number % 2==0) {
+   document.getElementById("demo").innerHTML =
+    "The number entered is "+number+" and Number is even";
+  }
+  else{
+  	 document.getElementById("demo").innerHTML =
+    "The number entered is "+number+" and Number is odd";
+  }
+}
+</script>
+
+</body>
+</html>
+
+============================================================================
+
+ans2)
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click on the button</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var osNameVer = prompt("Please enter OS name and its version");
+  let arr = osNameVer.split(" ");
+    document.getElementById("demo").innerHTML =
+    "The OS name is "+arr[0]+" and version is "+arr[1]+" .";
+}
+</script>
+
+</body>
+</html>
+
+
+==============================================================================
+
+ans3)
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to enter marks</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var marks = prompt("Please enter marks");
+  var grade;
+  if (marks < 60){
+        grade = "F";      
+      }
+      else if (marks < 70) {
+         grade = "D"; 
+      }
+      else if (marks < 80){
+      	grade = "C"; 
+      } else if (marks < 90) {
+        grade = "B"; 
+       } else if (marks < 100) {
+          grade = "A";
+       }
+document.getElementById("demo").innerHTML = " Marks are "+marks+" and grade is "+grade+".";
+}
+</script>
+
+</body>
+</html>
+
+----------------------------Using Switch Case---------------------
+<script>
+function myFunction() {
+  var marks = prompt("Please enter marks");
+  var grade;
+  switch(marks){
+    case marks<60 : grade="F";
+        break;
+    case marks<70 : grade="D";
+        break;
+    case marks<80 : grade="C";
+        break;
+    case marks<90 : grade="B";
+        break;
+    default : grade="A"
+  }
+document.getElementById("demo").innerHTML = " Marks are "+marks+" and grade is "+grade+".";
+}
+</script>
+
+------------------------Using Unary--------------------------------------
+
+<script>
+function myFunction() {
+  var marks = prompt("Please enter marks");
+  var grade = marks<60? "F" : marks<70? "D" : marks<80? "C" : marks<90? "B" :  "A";
+  
+document.getElementById("demo").innerHTML = " Marks are "+marks+" and grade is "+grade+".";
+}
+</script>
+
+-------------------------------end----------------------------------------

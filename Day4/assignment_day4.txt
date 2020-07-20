@@ -1,0 +1,49 @@
+Ans.1)
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        for (let a = 1; a < 100; a++) {
+            if (a % 3 == 0 && a %5 == 0) {
+                document.write(a + " . ");
+                document.write("fizzbuzz <br>"); 
+            }else if (a % 5 == 0) {
+                document.write(a + " . ");
+                document.write("buzz <br>"); 
+            }else if (a % 3 == 0 ) {
+                document.write(a + " . ");
+                document.write("fizz <br>"); 
+            }           
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
+
+======================================================================
+Ans2.)
+
+const {name, age, project:{ diceGame }} = student ;
+
+======================================================================
+Ans3.)
+<script>
+    var shoppingList = ['apple', 'bread', 'sugar'];
+    var shoppingBasket = [...shoppingList]; /clonning
+
+    console.log(shoppingList, shoppingBasket);
+    
+    shoppingBasket.push('milk','egg','coconut');
+    console.log(shoppingList, shoppingBasket);
+
+</script>
+
+======================================================================
+Ans4.)
+

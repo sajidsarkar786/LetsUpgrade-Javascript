@@ -1,0 +1,126 @@
+Ans.1)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    let number=[];
+    let input;  
+    do {
+       input = prompt("enter a number");
+      if(!isNaN(input)){
+       number.push(input);
+      }
+    } while (!isNaN(input));
+    
+    console.log(number);
+    let oddNo = number.filter((no)=>no%2!=0);
+    console.log(oddNo);
+    let cube = oddNo.map(element => {
+      return element**3;
+    });
+    console.log(cube);
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
+
+===========================================================
+ans2.)
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    class User{
+      constructor(name,age,email){
+        this.age=age;
+        this.name=name;
+        this.email=email;
+        this.courses=[];
+      }
+
+      login() {
+        console.log('${this.name} is logged-in');
+      }
+      logout() {
+        console.log('${this.name} is logged-out');
+      }
+    }
+
+    class Moderator extends User{
+      constructor(name,age,email){
+        super(name,age,email);
+        this.coins = 0;
+      }
+      addCoins(){
+        this.coins++;
+      }
+      removeCoins(){
+        this.coins--;
+      }
+    }
+
+    class Admin extends Moderator{
+      addCourse(user,course){
+      user.courses.push(course);
+      }
+      deleteCourse(user,course){
+      user.courses.pop(course);
+      }
+    }
+
+    let user1 = new Moderator('Dilip',25,'dilip@gmail.com')
+    let user2 = new Moderator('Krishnan',24,'k@gmai.com')
+    let user3 = new Moderator('Berlin',24,'b@gmail.com','Moderator');
+    let admin = new Admin('Rio',25,'r@gmail.com');
+    let users = [user1,user2,user3,admin];
+
+    users.forEach(element => {
+        console.log(element);
+    });
+    user1.addCoins();
+    user1.addCoins();
+    console.log(user1);
+    user1.removeCoins();
+    console.log(user1);
+    admin.addCourse(user1,"c++");
+    admin.addCourse(user1,"java");
+    console.log(user1);
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
+
+================================================================
+ans3)
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    function fetchAPI(){
+      fetch(' https://jsonplaceholder.typicode.com/todos')
+      .then(Response=>Response.json)
+      .then(resData=>console.log(resData));
+    }
+    fetchAPI();
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

@@ -1,0 +1,79 @@
+ans1.)
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  
+</head>
+<body>
+  <p>hello</p>
+  <script>
+    var colorArray = ["red", "orange", "green", "yellow", "blue", "black"];
+
+var count = 0;
+
+setInterval(()=>{
+   document.body.style.backgroundColor = colorArray[count];
+   count++;
+   if(count == colorArray.length) {
+       count = 0;
+   }
+}, 5000);
+    
+  </script>
+</body>
+</html>
+
+===========================================================
+ans2.)
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multiplication table</title>
+  
+</head>
+<body>
+  <script>
+    let no = prompt("enter a no.");
+    let line;
+    for (let i = 0; i <= 10; i++) {
+      line= no+" X "+ i +" = "+no*i+"<br>";
+      document.writeln(line);
+    }
+  </script>
+</body>
+</html>
+
+================================================================
+ans3).
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  
+</head>
+<body>
+  <input type="text" id="name" >
+  <button id="button" >click on it</button>
+  <h3 id="welcome"></h3>
+  <script>
+    let button = document.getElementById("button");
+    console.log(button);
+     button.onclick = ()=>{
+      let name = document.getElementById("name").value;
+      let text=document.getElementById("welcome");
+      text.innerText="Welcome ! "+name;
+    }
+  </script>
+</body>
+</html>
+===========================================================================

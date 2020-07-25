@@ -62,6 +62,7 @@ ans3).
   
 </head>
 <body>
+  <h3 id="time"></h3>
   <input type="text" id="name" >
   <button id="button" >click on it</button>
   <h3 id="welcome"></h3>
@@ -73,6 +74,13 @@ ans3).
       let text=document.getElementById("welcome");
       text.innerText="Welcome ! "+name;
     }
+    const ctime = document.getElementById('time');
+    function clock(){
+        let date = new Date();
+        let time = date.toLocaleTimeString();
+        ctime.innerText = time;
+    }
+    setInterval(clock,1000);
   </script>
 </body>
 </html>
